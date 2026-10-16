@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="1" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#EFE2D3"/>
+      <stop offset="1" stop-color="#D8C9BB"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="620" cy="220" r="240" fill="#F0E3D4" opacity="0.42"/>
+  <circle cx="200" cy="800" r="260" fill="#CFB3A1" opacity="0.2"/>
+  <g fill="none" stroke="#47342C" stroke-linecap="round" opacity="0.55">
+    <path d="M255 540 Q400 445 545 540" stroke-width="3.5"/>
+    <path d="M285 516 Q293 495 291 475" stroke-width="3"/>
+    <path d="M330 505 Q340 480 341 458" stroke-width="3"/>
+    <path d="M385 489 Q398 462 402 440" stroke-width="3"/>
+    <path d="M445 488 Q460 464 467 444" stroke-width="3"/>
+    <path d="M500 500 Q515 478 524 460" stroke-width="3"/>
+    <path d="M300 552 Q400 600 500 552" stroke-width="2.5" opacity="0.6"/>
+  </g>
+  <rect x="26" y="26" width="748" height="948" fill="none" stroke="#47342C" stroke-width="1.5" opacity="0.16" rx="3"/>
+  <text x="52" y="946" font-family="Georgia, 'Times New Roman', serif" font-size="24" letter-spacing="6" fill="#47342C" opacity="0.55">FOTO 04</text>
+  <text x="748" y="946" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="3" fill="#47342C" opacity="0.4">IZABEL KARINE</text>
+</svg>
