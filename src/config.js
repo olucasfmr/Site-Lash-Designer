@@ -34,7 +34,13 @@ export const nav = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Galeria", href: "#galeria" },
-  { label: "Pacotes", href: "#pacotes" },
+  {
+    label: "Serviços",
+    children: [
+      { label: "Pacotes", href: "#pacotes" },
+      { label: "Cursos", href: "#cursos" },
+    ],
+  },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
@@ -55,10 +61,11 @@ export const hero = {
 export const about = {
   overline: "Sobre mim",
   title: "Beleza que nasce do cuidado",
-  image: {
-    src: "fotos/retrato.svg",
-    alt: "Izabel Karine, lash designer",
-  },
+  photos: [
+    "/fotos/izabel/1.jpg",
+    "/fotos/izabel/2.jpg",
+  ],
+  alt: "Izabel Karine, lash designer",
   lead: "Beleza também é uma forma de cuidado: cada atendimento deve ser um momento de pausa, atenção e valorização pessoal.",
   paragraphs: [
     "Atendimento personalizado, preciso e acolhedor, unindo técnica, delicadeza e atenção aos detalhes.",
@@ -84,41 +91,81 @@ export const about = {
   ],
 };
 
-// Galeria de trabalhos — troque "src" pelo caminho das suas fotos
-// (coloque os arquivos na pasta "fotos" e use, por ex.: "fotos/meu-trabalho.jpg")
+// Galeria de trabalhos — cada modelo corresponde a uma pasta
+// "fotos/trabalhos/{id}/" e "photos" lista as fotos dessa pasta (capa = primeira).
 export const gallery = {
   overline: "Portfólio",
   title: "Galeria de trabalhos",
-  photos: [
+  models: [
     {
-      src: "fotos/foto-01.svg",
-      alt: "Extensão de cílios volume clássico com efeito natural",
-      caption: "Volume clássico",
+      id: "volume-brasileiro",
+      name: "Volume Brasileiro",
+      photos: [
+        "/fotos/trabalhos/volume-brasileiro/1.jpeg",
+        "/fotos/trabalhos/volume-brasileiro/2.jpeg",
+        "/fotos/trabalhos/volume-brasileiro/3.jpeg",
+        "/fotos/trabalhos/volume-brasileiro/4.jpeg",
+        "/fotos/trabalhos/volume-brasileiro/5.jpeg",
+      ],
     },
     {
-      src: "fotos/foto-02.svg",
-      alt: "Volume brasileiro com olhar cheio e marcante",
-      caption: "Volume brasileiro",
+      id: "volume-brasileiro-marrom",
+      name: "Volume Brasileiro Marrom",
+      photos: [
+        "/fotos/trabalhos/volume-brasileiro-marrom/1.jpeg",
+        "/fotos/trabalhos/volume-brasileiro-marrom/2.jpeg",
+        "/fotos/trabalhos/volume-brasileiro-marrom/3.jpeg",
+        "/fotos/trabalhos/volume-brasileiro-marrom/4.jpeg",
+      ],
     },
     {
-      src: "fotos/foto-03.svg",
-      alt: "Design de sobrancelhas alinhado aos traços do rosto",
-      caption: "Design de sobrancelhas",
+      id: "volume-americano",
+      name: "Volume Americano",
+      photos: [
+        "/fotos/trabalhos/volume-americano/1.jpeg",
+        "/fotos/trabalhos/volume-americano/2.jpeg",
+        "/fotos/trabalhos/volume-americano/3.jpeg",
+        "/fotos/trabalhos/volume-americano/4.jpeg",
+        "/fotos/trabalhos/volume-americano/5.jpeg",
+      ],
     },
     {
-      src: "fotos/foto-04.svg",
-      alt: "Volume híbrido com textura delicada",
-      caption: "Volume híbrido",
+      id: "fox-eyes",
+      name: "Fox Eyes",
+      photos: [
+        "/fotos/trabalhos/fox-eyes/1.jpeg",
+        "/fotos/trabalhos/fox-eyes/2.jpeg",
+        "/fotos/trabalhos/fox-eyes/3.jpeg",
+        "/fotos/trabalhos/fox-eyes/4.jpeg",
+      ],
     },
     {
-      src: "fotos/foto-05.svg",
-      alt: "Sobrancelhas desenhadas com henna delicada",
-      caption: "Henna design",
+      id: "mega-fox-eyes",
+      name: "Mega Fox Eyes",
+      photos: ["/fotos/trabalhos/mega-fox-eyes/1.jpeg"],
     },
     {
-      src: "fotos/foto-06.svg",
-      alt: "Cílios alongados para um olhar desperto",
-      caption: "Efeito alongado",
+      id: "micropigmentacao",
+      name: "Micropigmentação",
+      photos: [
+        "/fotos/trabalhos/micropigmentacao/1.jpeg",
+        "/fotos/trabalhos/micropigmentacao/2.jpeg",
+        "/fotos/trabalhos/micropigmentacao/3.jpeg",
+        "/fotos/trabalhos/micropigmentacao/4.jpeg",
+      ],
+    },
+    {
+      id: "efeito-sirena",
+      name: "Efeito Sirena",
+      photos: ["/fotos/trabalhos/efeito-sirena/1.jpeg"],
+    },
+    {
+      id: "brow-lamination",
+      name: "Brow Lamination",
+      photos: [
+        "/fotos/trabalhos/brow-lamination/1.jpeg",
+        "/fotos/trabalhos/brow-lamination/2.jpeg",
+      ],
     },
   ],
 };
@@ -131,34 +178,126 @@ export const packages = {
   cta: "Agendar",
   items: [
     {
-      name: "Volume Clássico",
+      name: "Efeito Sirena",
       description:
-        "Um fio aplicado em cada cílio natural, para um olhar desperto e natural — como se fossem seus.",
-      price: "R$ 150",
+        "Focado em criar um olhar alongado, sensual e sofisticado, imitando o efeito de um delineado gatinho.",
+      price: "R$ 100,00",
+      maintenance: null,
       featured: false,
     },
     {
-      name: "Volume Híbrido",
+      name: "Fox Eyes",
       description:
-        "Mistura de fios clássicos e leques, criando desenho, textura e um charme a mais no olhar.",
-      price: "R$ 180",
+        "É uma técnica que alonga e levanta o olhar, com foco no canto externo. Manutenção entre 20 dias.",
+      price: "R$ 160,00",
+      maintenance: "R$ 130,00",
+      featured: false,
+    },
+    {
+      name: "Volume Americano 5D",
+      description:
+        "É uma técnica de extensão de cílios que utiliza feixes pré-montados com 5 fios ultrafinos entrelaçados em uma mesma base em formato de W.",
+      price: "R$ 150,00",
+      maintenance: "R$ 120,00",
       featured: false,
     },
     {
       name: "Volume Brasileiro",
       description:
-        "Leques ultraleves com efeito cheio e marcante, mantendo o conforto e a saúde dos cílios.",
-      price: "R$ 220",
+        "É uma técnica de extensão de cílios que utiliza fios sintéticos em formato de \"Y\". Manutenção entre 20 dias.",
+      price: "R$ 140,00",
+      maintenance: "R$ 110,00",
       featured: true,
     },
     {
-      name: "Design de Sobrancelhas",
+      name: "Volume Brasileiro Marrom",
       description:
-        "Mapeamento personalizado, alinhamento e correção para sobrancelhas simétricas e harmoniosas.",
-      price: "R$ 70",
+        "É uma técnica de extensão de cílios que utiliza fios sintéticos em formato de \"Y\" Marrom. Manutenção entre 20 dias.",
+      price: "R$ 145,00",
+      maintenance: "R$ 115,00",
+      featured: false,
+    },
+    {
+      name: "Mega Fox Eyes",
+      description:
+        "São uma tendência de extensão de cílios que une o efeito foxy (olhar de raposa, alongado e sensual) com a densidade marcante do Mega Volume. Dura em média 35 a 40 dias e não tem manutenção.",
+      price: "R$ 210,00",
+      maintenance: null,
+      featured: false,
+    },
+    {
+      name: "Micropigmentação Shadow",
+      description:
+        "É uma técnica de preenchimento de sobrancelhas que utiliza micropixels para criar um efeito esfumado e degradê, simulando o visual de uma sobrancelha levemente maquiada.",
+      price: "R$ 400,00",
+      maintenance: null,
+      featured: false,
+    },
+    {
+      name: "Brow Lamination",
+      description:
+        "Alinhar, modelar e fixar os fios das sobrancelhas para cima, criando um efeito de maior volume, densidade e aspecto penteado.",
+      price: "R$ 150,00",
+      maintenance: null,
       featured: false,
     },
   ],
+};
+
+// Cursos & Mentoria — formação para lash designers
+export const courses = {
+  overline: "Cursos & Mentoria",
+  title: "Eleve sua carreira",
+  subtitle: "Torne-se uma Lash Designer segura, valorizada e lucrativa.",
+  cards: [
+    {
+      tag: "Especialização",
+      name: "I.K. Lash Power",
+      subtitle: "Para quem já atende e quer se destacar no mercado.",
+      description:
+        "Curso intensivo de 1 dia (08h às 18h) com teoria + prática para você atender com segurança e qualidade.",
+      topics: [
+        "Acoplagem perfeita dos fios",
+        "Curvaturas ideais e tipos de fios",
+        "Fio tecnológico e suas vantagens",
+        "Mapeamento personalizado",
+        "Biossegurança e postura profissional",
+      ],
+      bonus: ["1 hora de mentoria exclusiva após 30 dias."],
+      price: "R$ 800,00",
+      payment: "à vista ou até 12x no cartão",
+      cta: "Quero me especializar",
+      message: "Olá! Tenho interesse no Curso de Especialização I.K. Lash Power.",
+    },
+    {
+      tag: "Iniciante",
+      name: "I.K. Lash Power",
+      subtitle: "Sua virada de chave na extensão de cílios.",
+      description:
+        "2 dias de imersão presencial. Você aprende técnica, prática e mentalidade de empresária. Aqui você não aprende só a colocar cílios, aprende a viver de cílios.",
+      topics: [
+        "Teoria completa e acoplagem perfeita",
+        "Controle de adesivo e direcionamento",
+        "Prática em modelo real",
+      ],
+      bonus: [
+        "Aula de Marketing (atração de clientes) e Finanças (precificação e MEI)",
+        "Kit Iniciante incluso (material novinho) + Apostila + Certificado",
+      ],
+      price: "R$ 1.000,00",
+      payment: "à vista ou até 12x no cartão",
+      cta: "Garantir minha vaga",
+      message: "Olá! Tenho interesse no Curso Iniciante I.K. Lash Power.",
+    },
+  ],
+  students: {
+    title: "Algumas das nossas alunas em ação:",
+    photos: [
+      "/fotos/mentorias/1.jpeg",
+      "/fotos/mentorias/2.jpeg",
+      "/fotos/mentorias/3.jpeg",
+    ],
+  },
 };
 
 // Depoimentos de clientes

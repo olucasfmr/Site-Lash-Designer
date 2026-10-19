@@ -1,4 +1,5 @@
 import { about } from "@/config";
+import Carousel from "./Carousel";
 import Reveal from "./Reveal";
 import Section, { SectionHeading } from "./Section";
 import { SparkleIcon } from "./Icons";
@@ -29,10 +30,10 @@ export default function About() {
               className="absolute -inset-3 rounded-[2.5rem] border border-taupe"
               aria-hidden="true"
             />
-            <img
-              src={about.image.src}
-              alt={about.image.alt}
-              className="relative aspect-[4/5] w-full rounded-[2rem] border border-greige/60 object-cover shadow-xl shadow-cafe/10"
+            <Carousel
+              photos={about.photos}
+              alt={about.alt}
+              className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-greige/60 shadow-xl shadow-cafe/10"
             />
           </div>
         </Reveal>

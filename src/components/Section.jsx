@@ -11,7 +11,7 @@ export default function Section({ id, className = "", children }) {
   );
 }
 
-export function SectionHeading({ overline, title, center = true }) {
+export function SectionHeading({ overline, title, subtitle, center = true }) {
   return (
     <div
       className={`mb-12 md:mb-16 ${
@@ -32,6 +32,11 @@ export function SectionHeading({ overline, title, center = true }) {
         <SparkleIcon className="h-3.5 w-3.5 text-taupe" />
         <span className="h-px w-10 bg-taupe" />
       </div>
+      {subtitle && (
+        <p className="mt-5 text-base leading-relaxed text-cafe/70 md:text-lg">
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 }

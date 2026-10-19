@@ -54,15 +54,27 @@ export default function Footer() {
             className="flex flex-wrap justify-center gap-x-6 gap-y-2"
             aria-label="Menu do rodapé"
           >
-            {nav.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-offwhite/70 transition-colors hover:text-offwhite"
-              >
-                {item.label}
-              </a>
-            ))}
+            {nav.flatMap((item) =>
+              item.children ? (
+                item.children.map((child) => (
+                  <a
+                    key={child.href}
+                    href={child.href}
+                    className="text-sm text-offwhite/70 transition-colors hover:text-offwhite"
+                  >
+                    {child.label}
+                  </a>
+                ))
+              ) : (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-offwhite/70 transition-colors hover:text-offwhite"
+                >
+                  {item.label}
+                </a>
+              )
+            )}
           </nav>
 
           <div className="mt-10 flex w-full flex-col items-center justify-between gap-3 border-t border-offwhite/10 pt-6 text-xs text-offwhite/50 sm:flex-row">

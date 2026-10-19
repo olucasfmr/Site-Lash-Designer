@@ -24,13 +24,20 @@ export default function Packages() {
                 </span>
               )}
               <h3 className="font-display text-2xl font-medium">{item.name}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-cafe/70">
+              <p className="mt-3 text-sm leading-relaxed text-cafe/70">
                 {item.description}
               </p>
-              <p className="mt-6 font-display text-3xl font-medium">{item.price}</p>
+              <div className="mt-auto pt-6">
+                <p className="font-display text-3xl font-medium">{item.price}</p>
+                {item.maintenance && (
+                  <p className="mt-1 text-sm text-cafe/60">
+                    Manutenção: {item.maintenance}
+                  </p>
+                )}
+              </div>
               <a
                 href={whatsappLink(
-                  `Olá! Vi seu portfólio e gostaria de agendar o ${item.name}.`
+                  `Olá! Gostaria de agendar o serviço de ${item.name}.`
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
