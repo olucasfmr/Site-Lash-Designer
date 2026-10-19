@@ -93,10 +93,10 @@ export default function Contact() {
         {cards.map((card, index) => (
           <Reveal key={card.label} delay={index * 80} className="h-full">
             <div
-              className={`h-full rounded-3xl border border-greige/60 bg-cream p-6 ${card.wrapperClass || ""}`}
+              className={`group h-full rounded-3xl border border-greige/60 bg-cream p-6 ${card.wrapperClass || ""}`}
               {...(card.interactiveProps || {})}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-taupe/25 text-cafe">
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-taupe/25 text-cafe transition-colors duration-300 group-hover:bg-taupe/40">
                 <card.icon className="h-5 w-5" />
               </span>
               <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.25em] text-cafe/50">
@@ -111,29 +111,35 @@ export default function Contact() {
       <Reveal delay={150}>
         <div className="relative mt-14 overflow-hidden rounded-[2.5rem] bg-cafe px-8 py-14 text-center md:mt-16 md:px-16 md:py-20">
           <div
-            className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-offwhite/5 blur-3xl"
+            className="blob-a absolute -left-20 -top-20 h-64 w-64 rounded-full bg-offwhite/5 blur-3xl"
             aria-hidden="true"
           />
           <div
-            className="absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-taupe/15 blur-3xl"
+            className="blob-b absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-taupe/15 blur-3xl"
             aria-hidden="true"
           />
           <div className="relative">
-            <h3 className="mx-auto max-w-xl font-display text-3xl font-medium leading-tight text-offwhite md:text-4xl">
-              {cta.title}
-            </h3>
-            <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-offwhite/70">
-              {cta.text}
-            </p>
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-offwhite px-8 py-4 text-sm font-semibold tracking-wide text-cafe transition-transform hover:scale-105"
-            >
-              <WhatsAppIcon className="h-5 w-5" />
-              {cta.button}
-            </a>
+            <Reveal delay={100}>
+              <h3 className="mx-auto max-w-xl font-display text-3xl font-medium leading-tight text-offwhite md:text-4xl">
+                {cta.title}
+              </h3>
+            </Reveal>
+            <Reveal delay={200}>
+              <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-offwhite/70">
+                {cta.text}
+              </p>
+            </Reveal>
+            <Reveal delay={300}>
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-offwhite px-8 py-4 text-sm font-semibold tracking-wide text-cafe transition-transform hover:scale-105 active:scale-95"
+              >
+                <WhatsAppIcon className="h-5 w-5" />
+                {cta.button}
+              </a>
+            </Reveal>
           </div>
         </div>
       </Reveal>

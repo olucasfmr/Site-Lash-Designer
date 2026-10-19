@@ -11,7 +11,7 @@ export default function Testimonials() {
       <div className="grid gap-5 md:grid-cols-3 md:gap-6">
         {testimonials.items.map((item, index) => (
           <Reveal key={item.name} delay={index * 100} className="h-full">
-            <figure className="relative flex h-full flex-col rounded-3xl border border-greige/60 bg-cream p-8">
+            <figure className="relative flex h-full flex-col rounded-3xl border border-greige/60 bg-cream p-8 transition-transform duration-300 hover:-translate-y-1">
               <span
                 className="font-display text-7xl leading-none text-taupe"
                 aria-hidden="true"

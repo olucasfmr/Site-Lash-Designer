@@ -51,8 +51,8 @@ export default function Carousel({ photos, alt, className = "" }) {
           src={photo}
           alt={`${alt} — foto ${i + 1}`}
           aria-hidden={i !== index}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
-            i === index ? "opacity-100" : "opacity-0"
+          className={`carousel-img absolute inset-0 h-full w-full object-cover ${
+            i === index ? "scale-[1.06] opacity-100" : "scale-100 opacity-0"
           }`}
         />
       ))}

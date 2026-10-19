@@ -10,7 +10,7 @@ import { CheckIcon, SparkleIcon, WhatsAppIcon } from "./Icons";
 function CourseCard({ card, delay }) {
   return (
     <Reveal delay={delay} className="h-full">
-      <div className="flex h-full flex-col rounded-3xl border border-greige/60 bg-offwhite p-7 transition-transform duration-300 hover:-translate-y-1 md:p-8">
+      <div className="flex h-full flex-col rounded-3xl border border-greige/60 bg-offwhite p-7 transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-cafe/10 md:p-8">
         <span className="inline-flex w-fit rounded-full bg-greige/60 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-cafe">
           {card.tag}
         </span>
@@ -59,7 +59,7 @@ function CourseCard({ card, delay }) {
           href={whatsappLink(card.message)}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-cafe px-5 py-3.5 text-sm font-medium tracking-wide text-offwhite transition-transform hover:scale-105"
+          className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-cafe px-5 py-3.5 text-sm font-medium tracking-wide text-offwhite transition-transform hover:scale-105 active:scale-95"
         >
           <WhatsAppIcon className="h-4 w-4" />
           {card.cta}

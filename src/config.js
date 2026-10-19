@@ -307,13 +307,13 @@ export const testimonials = {
   items: [
     {
       name: "Mariana C.",
-      detail: "Volume clássico",
-      text: "A Izabel transformou meu olhar! O atendimento é impecável, ela explica tudo com calma e o resultado ficou natural e lindo.",
+      detail: "Fox Eyes",
+      text: "A Izabel transformou meu olhar! O atendimento é impecável, ela explicou tudo com calma e o efeito do Fox Eyes ficou exatamente como eu queria: natural e com aquele lifting.",
     },
     {
       name: "Fernanda L.",
-      detail: "Design de sobrancelhas",
-      text: "Simplesmente a melhor! Minhas sobrancelhas nunca estiveram tão bem desenhadas e alinhadas ao meu rosto.",
+      detail: "Brow Lamination",
+      text: "Simplesmente a melhor! Minhas sobrancelhas nunca estiveram tão alinhadas e preenchidas. A laminação deixou os fios super definidos e o resultado ficou natural, do jeito que eu queria.",
     },
     {
       name: "Paula R.",

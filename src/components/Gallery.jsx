@@ -20,7 +20,7 @@ export default function Gallery() {
             <button
               type="button"
               onClick={() => setOpen(index)}
-              className="group relative block w-full overflow-hidden rounded-2xl border border-greige/60 bg-cream"
+              className="group relative block w-full overflow-hidden rounded-2xl border border-greige/60 bg-cream transition-transform duration-300 active:scale-[0.98]"
               aria-label={`Abrir galeria: ${model.name}`}
             >
               <span className="block aspect-[4/5] overflow-hidden">
@@ -28,14 +28,14 @@ export default function Gallery() {
                   src={model.photos[0]}
                   alt={`${model.name} — foto 1`}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                 />
               </span>
               <span className="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-cafe/85 via-cafe/40 to-transparent px-4 pb-3 pt-10">
-                <span className="font-display text-sm italic text-offwhite md:text-base">
+                <span className="font-display text-sm italic text-offwhite transition-transform duration-500 group-hover:-translate-y-1 md:text-base">
                   {model.name}
                 </span>
-                <span className="mb-0.5 hidden text-[10px] tracking-[0.25em] text-offwhite/70 md:block">
+                <span className="mb-0.5 hidden text-[10px] tracking-[0.25em] text-offwhite/70 transition-all duration-300 md:block md:translate-x-1.5 md:opacity-0 md:group-hover:translate-x-0 md:group-hover:opacity-100">
                   VER
                 </span>
               </span>

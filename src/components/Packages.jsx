@@ -12,10 +12,10 @@ export default function Packages() {
         {packages.items.map((item, index) => (
           <Reveal key={item.name} delay={index * 80} className="h-full">
             <div
-              className={`relative flex h-full flex-col rounded-3xl border p-7 transition-transform duration-300 hover:-translate-y-1 ${
+              className={`relative flex h-full flex-col rounded-3xl border p-7 duration-300 hover:-translate-y-1.5 ${
                 item.featured
-                  ? "border-taupe bg-greige/25 shadow-lg shadow-taupe/20"
-                  : "border-greige/60 bg-cream"
+                  ? "border-taupe bg-greige/25 shadow-lg shadow-taupe/20 transition-transform"
+                  : "border-greige/60 bg-cream transition-[transform,box-shadow] hover:shadow-lg hover:shadow-cafe/10"
               }`}
             >
               {item.featured && (
@@ -41,7 +41,7 @@ export default function Packages() {
                 )}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-cafe px-5 py-3 text-sm font-medium tracking-wide text-offwhite transition-transform hover:scale-105"
+                className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-cafe px-5 py-3 text-sm font-medium tracking-wide text-offwhite transition-transform hover:scale-105 active:scale-95"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 {packages.cta}

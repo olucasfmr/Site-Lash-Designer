@@ -11,3 +11,43 @@
  ○ Compiling / ...
  ✓ Compiled / in 2.1s (598 modules)
  GET / 200 in 3424ms
+ ✓ Compiled in 535ms (246 modules)
+ ✓ Compiled in 372ms (246 modules)
+ ✓ Compiled in 710ms (246 modules)
+ ✓ Compiled in 573ms (246 modules)
+ ✓ Compiled in 341ms (246 modules)
+ ✓ Compiled in 232ms (246 modules)
+ ✓ Compiled in 263ms (246 modules)
+ ✓ Compiled in 278ms (246 modules)
+ ✓ Compiled in 202ms (246 modules)
+ ✓ Compiled in 252ms (246 modules)
+ ✓ Compiled in 390ms (246 modules)
+ ✓ Compiled in 556ms (246 modules)
+ ✓ Compiled in 350ms (246 modules)
+ ✓ Compiled in 347ms (246 modules)
+ ✓ Compiled in 259ms (246 modules)
+ ✓ Compiled in 217ms (246 modules)
+ ✓ Compiled in 324ms (246 modules)
+ ✓ Compiled in 232ms (246 modules)
+ ✓ Compiled in 254ms (246 modules)
+ ✓ Compiled in 553ms (246 modules)
+ ✓ Compiled in 281ms (246 modules)
+ ✓ Compiled in 322ms (246 modules)
+ ✓ Compiled in 302ms (246 modules)
+ ✓ Compiled in 257ms (246 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 544ms (588 modules)
+ GET / 200 in 1034ms
+ GET / 200 in 269ms
+ GET / 200 in 2192ms
+ GET / 200 in 2044ms
+ GET / 200 in 2094ms
+ GET / 200 in 1412ms
+ GET / 200 in 255ms
+ ✓ Compiled in 1135ms (601 modules)
+ ✓ Compiled in 622ms (601 modules)
+ ✓ Compiled in 745ms (601 modules)
+ ✓ Compiled in 408ms (247 modules)
+ ✓ Compiled in 242ms (247 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Administrador\Documents\POtifilio Lash\.next\cache\webpack\server-development\13.pack.gz_' -> 'C:\Users\Administrador\Documents\POtifilio Lash\.next\cache\webpack\server-development\13.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Administrador\Documents\POtifilio Lash\.next\cache\webpack\client-development\13.pack.gz_' -> 'C:\Users\Administrador\Documents\POtifilio Lash\.next\cache\webpack\client-development\13.pack.gz'

@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`header-in fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "border-b border-greige/60 bg-offwhite/90 shadow-sm backdrop-blur"
           : "bg-transparent"
@@ -75,7 +75,7 @@ export default function Header() {
                   />
                 </button>
                 {menuOpen === item.label && (
-                  <div className="anim-fade absolute left-1/2 top-full z-10 mt-3 w-48 -translate-x-1/2 rounded-2xl border border-greige/60 bg-offwhite p-2 shadow-lg">
+                  <div className="anim-pop absolute left-1/2 top-full z-10 mt-3 w-48 -translate-x-1/2 rounded-2xl border border-greige/60 bg-offwhite p-2 shadow-lg">
                     {item.children.map((child) => (
                       <a
                         key={child.href}
